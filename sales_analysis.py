@@ -1,8 +1,15 @@
 import pandas as pd
 
-df = pd.read_csv("vendas.csv")
+df = pd.read_csv("sales.csv")
 
-print("Total vendido:", df["valor"].sum())
-print("Venda média:", df["valor"].mean())
-print("Maior venda:", df["valor"].max())
-print("Menor venda:", df["valor"].min())
+print("\n=== ALL DATA ===")
+print(df)
+
+print("\n=== SALES IN AMERICANA ===")
+print(df[df["cidade"] == "Americana"])
+
+print("\n=== SALES GREATER THAN 150 ===")
+print(df[df["valor"] > 150])
+
+print("\n=== TOTAL SALES BY CITY ===")
+print(df.groupby("cidade")["valor"].sum())
