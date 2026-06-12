@@ -1,6 +1,6 @@
 cliente,valor,cidade
 Joao,100,Campinas
 Maria,250,Americana
-Pedro,150,Campinas
+Pedro,,Campinas
 Ana,300,Piracicaba
-Carlos,200,Americana
+Carlos,200,
